@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ДЗ Html-страница с JavaScript-ом</title>
+        <style>
+        h2 {
+            color: steelblak;
+        }
+        
+        .name {
+            width: 300px;
+            float: right;
+            border: 1px solid steelblue;
+        }
+        
+        .date {
+            width: 303px;
+            float: right;
+            border: 1px solid steelblue;
+        }
+        
+        .sex {
+            width: 306px;
+            float: right;
+            border: 1px solid steelblue;
+            
+        }
+        
+        #statTab {
+            border: 1px solid steelblue;
+            border-collapse: collapse;
+           
+        }
+        
+        #statTab1 {
+            border: 10px solid steelblak;
+            border-collapse: collapse;
+            width: 520px;
+        }
+        
+        
+        #statTab1 tr td {
+            padding: 10px;
+        }
+    </style>
+	</head>
+<body>
+
+
+
+<h2>Форма добавления информации о студенте</h2>
+
+<table border = "1" id = "statTab">
+  <tr>
+    <td>
+      <table id = "statTab1"> 
+        <tbody>
+          <tr> 
+            <td>
+              	<lable>Имя студента: </lable>
+              <br><br>
+              	<lable>Дата рождения: </lable>
+              <br><br>    
+              	<lable>Пол: </lable>
+              <br><br>
+              	<button>Добавить</button>
+            </td>
+            <td>
+              <form action = "" metod = "post">
+              	<input class = "name" id = "name" type = "text" placeholder = "Василий Георгиевич Пупкин"> 
+              <br><br>
+              	<form action = "" metod = "post">
+              <input class = "date" id = "birthday" type = "date">
+              <br><br>
+                <form action = "" metod = "post">
+                  <select class = "sex" id = "sex">
+                    <option disabled selected ></option>
+                    <option>мужчина</option>
+                    <option>женщина</option>
+                  </select>
+              <br><br><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+<h2>Таблица студентов</h2>
+
+<style>
+       .students-tab {
+            border: 1px solid steelblue;
+            width: 650px;
+            border-collapse: collapse;
+            margin-bottom: 300px;
+        }
+
+        .students-tab tr td {
+            border: 1px solid steelblue;
+        }
+
+</style>
+
+  
+
+    <table class="students-tab" id="studentsTab">
+        <thead>
+            <tr>
+                <td>Имя студента</td>
+                <td>Пол</td>
+                <td>Дата рождения</td>
+                <td>Возраст</td>
+            </tr>
+        </thead>
+
+        <tbody class = "tbody">
+            <tr>
+                <td>Иван Ограномович Штейн</td>
+                <td>мужчина</td>
+                <td>1974-06-12</td>
+                <td class = "age">46</td>
+            </tr>
+            <tr>
+                <td>Гертруда Анатольевна Иванова</td>
+                <td>женщина</td>
+                <td>1987-01-01</td>
+                <td class = "age">34</td>
+            </tr>
+            <tr>
+                <td>Воланд Игоревич Муха</td>
+                <td>мужчина</td>
+                <td>1974-04-27</td>
+                <td class = "age" >47</td>
+            </tr>
+            
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td colspan="4">&nbsp;</td>
+            </tr> 
+            <tr id = "tr">
+                <td colspan="3">Средний возраст студентов</td>
+                <td class = "averageAge"> averageAge()</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+
+<script src="addStudent.js"></script>
+
+</body>
+</html>
