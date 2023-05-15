@@ -9,40 +9,39 @@ public class Main {
         int[] arrayNumbers4 = arrayNumbers.clone();
         List list5 = Arrays.stream(arrayNumbers).boxed().collect(Collectors.toList());
 
-        //Сортировка Выбором
+        // Сортировка Выбором
         long startTimeSelection = System.currentTimeMillis();
         SelectionSort selectionSort = new SelectionSort(arrayNumbers);
         selectionSort.sort();
         long endTimeSelection = System.currentTimeMillis();
         System.out.println("SelectionSort: " + (endTimeSelection - startTimeSelection) + "millisecond");
 
-        //Сортировка Пузырьком
+        // Сортировка Пузырьком
         long startTimeBubble = System.currentTimeMillis();
         Bubble bubble = new Bubble(arrayNumbers2);
         bubble.sort();
         long endTimeBubble = System.currentTimeMillis();
         System.out.println("Bubble: " + (endTimeBubble - startTimeBubble) + "millisecond");
 
-        //Сортировка Вставкой
+        // Сортировка Вставкой
         long startTimeInsertion = System.currentTimeMillis();
         Insertion insertion = new Insertion(arrayNumbers3);
         insertion.sort();
         long endTimeInsertion = System.currentTimeMillis();
         System.out.println("Insertion: " + (endTimeInsertion - startTimeInsertion) + "millisecond");
 
-        //Стандартная сортировка массива
+        // Стандартная сортировка массива
         long startTimeSort = System.currentTimeMillis();
         Arrays.sort(arrayNumbers4);
         long endTimeSort = System.currentTimeMillis();
         System.out.println("Arrays.sort: " + (endTimeSort - startTimeSort) + "millisecond");
 
-        //Стандартная сортировка списка
+        // Стандартная сортировка списка
         long startTimeSort1 = System.currentTimeMillis();
         Collections.sort(list5);
         long endTimeSort1 = System.currentTimeMillis();
         System.out.println("Collections.sort: " + (endTimeSort1 - startTimeSort1) + "millisecond");
     }
-
 
 
     private static void printArray(int[] arrayNumbers) {
