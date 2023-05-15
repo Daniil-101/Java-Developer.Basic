@@ -69,3 +69,4 @@ SELECT question.text_question, question_answer.number_answer, answer.text_answer
 question_answer.right_answer FROM question 
 LEFT JOIN question_answer ON question_answer.question_id = question.id 
 LEFT JOIN answer ON question_answer.answer_id = answer.id; 
+
